@@ -40,7 +40,7 @@ step5: In main():
 - Declare five objects: s1, s2, s3, s4, s5.
 
 - Call input() for each object.
-- 
+
 - Call output() for each object to display the results.
 
 step6: Stop.
@@ -200,14 +200,23 @@ Create multiple objects representing different data records and compute
 the overall feature-wise average across all objects.
 
 # Algorithm
+
 step1: Start.
+
 step2: Define a class DataRecord with members: name, age, income, and score.
+
 step3: Define getsum() to return (age + income + score).
+
 step4: Define getaverage() to return the sum divided by 3.
+
 step5: In main():
+
 - Create five objects and take user input.
+
 - Iterate through objects to display row-wise sum and average.
+
 - Calculate the Column-wise average by summing a specific attribute (e.g., age) across all objects and dividing by 5.
+
 step6: Stop.
 
 # CODE
