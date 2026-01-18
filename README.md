@@ -16,7 +16,7 @@
 
 4. Member Functions: These are functions defined inside or outside the class that operate on the data members of the objects.
 
-# Problem Statement 1
+# Problem Statement 1_a
 Design and implement a program to demonstrate the concept of Class
 and Object by creating a Student class.
 The class should contain data members such as roll number, student
@@ -45,63 +45,8 @@ step5: In main():
 
 step6: Stop.
 
-# CODE
 
-
-#include <iostream>
-using namespace std;
-class stu{
-    public:
-    int rollno, marks;
-    string name;
-    
-    void input(){
-        cout<<"enter rollno. =";
-        cin>>rollno;
-        cout <<"enter name =";
-        cin>>name;
-        cout<<"enter marks =";
-        cin>>marks;
-        
-    }
-    
-    void output(){
-        cout<<"rollno. ="<<rollno<<"\t";
-        cout<<" name ="<<name<<"\t";
-        cout<<"  marks ="<<marks;
-    }
-};
-
-int main () {
-    stu s1, s2, s3, s4, s5;
-    
-    cout  << "entry of stu.1" << endl;
-    s1.input();
-    cout << "\nentry of stu.2" << endl;
-    s2.input();
-    cout << "\nentry of stu.3" << endl;
-    s3.input();
-    cout << "\nentry of stu.4" << endl;
-    s4.input();
-    cout << "\nentry of stu.5" << endl;
-    s5.input();
-    
-    cout<<"\nstructured format"<<endl;
-    cout<<"stuent 1 :-"<<endl;
-    s1.output();
-    cout<<"\nstudent 2 :-"<<endl;
-    s2.output();
-    cout<<"\nstudent 3 :-"<<endl;
-    s3.output();
-    cout<<"\nstudent 4 :-"<<endl;
-    s4.output();
-    cout<<"\nstudent 5 :-"<<endl;
-    s5.output();
-    
-    return 0;
-}
-
-# Problem Statement 2
+# Problem Statement 1_b
 Design a Course class that represents an academic course.
 The class should have private data members such as course name,
 course code, number of credits, and total enrolled students.
@@ -129,69 +74,10 @@ step4: In main():
 
 step5: Stop.
 
-# CODE
-
-#include <iostream>
-using namespace std;
-class Course {
-private:
-    string coursename;
-    int totalstudents, coursecode, credits;
-
-public:
-    void input() {
-        cout << "Enter Course Name: ";
-        cin >> coursename;
-        cout << "Enter Course Code: ";
-        cin >> coursecode;
-        cout << "Enter Credits: ";
-        cin >> credits;
-        cout << "Enter Total Enrolled Students: ";
-        cin >> totalstudents;
-    }
-
-    void output() {
-        cout << "Course: " << coursename <<endl;
-        cout << "Code:" << coursecode << endl;
-        cout << "Credits: " << credits <<endl;
-        cout << "Enrollment: " << totalstudents << endl;
-    }
-
-    
-    int gettotalstudents() {
-        return totalstudents;
-    }
-    string getcoursename() {
-        return coursename;
-    }
-};
-
-int main() {
-    Course c1, c2, c3;
-
-    cout << "Enter Details of 3 Courses" << endl;
-    cout <<"course 1 :-"<<endl;
-    c1.input();
-    cout <<"\ncourse 2:-"<<endl;
-    c2.input();
-    cout<<"\ncourse 3:-"<<endl;
-    c3.input();
-    
-    cout << "\nCourse with Highest Enrollments" << endl;
-    if (c1.gettotalstudents() > c2.gettotalstudents() && c1.gettotalstudents() > c3.gettotalstudents()) {
-        c1.output();
-    } 
-    else if (c2.gettotalstudents() > c1.gettotalstudents() && c2.gettotalstudents() > c3.gettotalstudents()) {
-        c2.output();
-    } 
-    else {
-        c3.output();
-    }
-    return 0;
-}
 
 
-# Problem Statement 3
+
+# Problem Statement 1_c
 Create a DataRecord class to represent a single row of a dataset
 containing multiple numerical features (e.g., age, income, score).
 The class should include methods to calculate the sum and average of
@@ -219,66 +105,7 @@ step5: In main():
 
 step6: Stop.
 
-# CODE
 
-#include <iostream>
-using namespace std;
-class DataRecord {
-public:
-    string name;
-    int age, income, score;
-    
-    void input(){
-        cout<<"enter name :";
-        cin>>name;
-        cout<<"enter age: ";
-        cin>>age;
-        cout<<"enter income: ";
-        cin>>income;
-        cout<<"enter score: ";
-        cin>>score;
-    }
-    int getsum() {
-        return age + income + score;
-    }
-    double getaverage() {
-        return (age + income + score) / 3;
-    }
-};
-
-int main() {
-    DataRecord r1, r2, r3, r4, r5;
-    cout<<"enter row 1"<<endl;
-    r1.input();
-    cout<<"\nenter row 2"<<endl;
-    r2.input();
-    cout<<"\nenter row 3"<<endl;
-    r3.input();
-    cout<<"\nenter row 4"<<endl;
-    r4.input();
-    cout<<"\nenter row 5"<<endl;
-    r5.input();
-    
-    //row (sum and average)
-    cout << "\nrow-wise Statistics" << endl;
-    cout << r1.name <<"\t"<< "Sum: " << r1.getsum() << "\t"<<"Avg: " << r1.getaverage() << endl;
-    cout << r2.name << "\t"<< "Sum: " << r2.getsum() << "\t"<<"Avg: " << r2.getaverage()<< endl;
-    cout << r3.name << "\t"<<"Sum: " << r3.getsum() << "\t"<<"Avg: " << r3.getaverage() << endl;
-    cout << r4.name << "\t"<<"Sum: " << r4.getsum() << "\t"<<"Avg: " << r4.getaverage() << endl;
-    cout << r5.name << "\t"<<"Sum: " << r5.getsum() << "\t"<<"Avg: " << r5.getaverage() << endl;
-
-   //total average (featurewise)
-    double avgAge = (r1.age + r2.age + r3.age + r4.age + r5.age) / 5;
-    double avgIncome = (r1.income+ r2.income+ r3.income+ r4.income+r5.income) / 5;
-    double avgScore = (r1.score + r2.score + r3.score +r4.score + r5.score) / 5;
-
-    cout << "\ncolumn-wise Averages ---" << endl;
-    cout << "Average Age: " << avgAge << endl;
-    cout << "Average Income: " << avgIncome << endl;
-    cout << "Average Score: " << avgScore << endl;
-
-    return 0;
-}
 
 # CONCLUSION
 
