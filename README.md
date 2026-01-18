@@ -46,7 +46,8 @@ step5: In main():
 step6: Stop.
 
 # CODE
-//24006040_sanjanareddy_practicle-1-a
+{
+
 #include <iostream>
 using namespace std;
 class stu{
@@ -99,5 +100,6 @@ int main () {
     
     return 0;
 }
+
 
 
