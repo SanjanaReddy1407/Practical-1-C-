@@ -1,4 +1,4 @@
-# Practical-1-C++
+# Practical-1__C++
 
 # AIM
 ## Program to implement concept of class and object.
@@ -46,7 +46,7 @@ step5: In main():
 step6: Stop.
 
 # CODE
-{
+
 
 #include <iostream>
 using namespace std;
@@ -221,7 +221,6 @@ step6: Stop.
 
 # CODE
 
-//24006040_sanjanareddy_practicle-1-c
 #include <iostream>
 using namespace std;
 class DataRecord {
