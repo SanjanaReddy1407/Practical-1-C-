@@ -1,6 +1,6 @@
-# Practical-1__C++
+# Practicals__OOPs__C++
 
-# AIM
+# AIM - 1
 ## Program to implement concept of class and object.
 
 # Theory
